@@ -13,12 +13,17 @@ app.use(cors())
 
 app.post('/mascara', jsonParser, (req, res) => {
 
-    res.json({ "result": mascara(req.body.mask,req.body.num)})
+    if(req.body.mask == undefined || req.body.num == undefined){
+        res.json({ "error": "Parâmetros incorretos."})
+    }
+    else{
+        res.json({ "result": toMask(req.body.mask,req.body.num)})
+    }
+    
 
 })
 
-
-function mascara(mask,num){
+function toMask(mask,num){
     mask = mask.toString()
     num = num.toString()
 
