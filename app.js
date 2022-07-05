@@ -14,7 +14,7 @@ app.use(cors())
 app.post('/mascara', jsonParser, (req, res) => {
 
     if(req.body.mask == undefined || req.body.num == undefined){
-        res.json({ "error": "Parâmetros incorretos."})
+        res.json({ "error": "Parâmetros incorretos...."})
     }
     else{
         res.json({ "result": toMask(req.body.mask,req.body.num)})
