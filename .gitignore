@@ -1,1 +1,10 @@
 node_modules
+# docker secrets
+.ploomesdev/mascaras/secrets
+
+# ploomesdev temporary files
+.ploomesdev/mascaras/generated
+
+startup.sh
+.ploomesdev
+.dockerignore
